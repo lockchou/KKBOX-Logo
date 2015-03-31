@@ -1,0 +1,139 @@
+body {
+    background: url(../images/logo3.png) no-repeat center 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+	width: 390px;
+	background-color: #1dadca;
+	color: #fff;
+	height: 160px;
+	margin: 0 auto;
+	text-align: left;
+	margin-top: 10px;
+	padding: 35px 53px 40px;
+	border-top-color: #1dadca;
+	box-sizing: border-box;
+	opacity: 0;
+	transition-property: opacity background-color border-top-color;
+	transition-duration: 1s;
+	transition-timing-function: linear;
+	cursor: pointer;
+}
+.container:hover {
+	opacity: 1;
+	background-color: black;
+	border-top-color: black;
+}
+.container:after {
+	content:"CSS";
+}
+
+.block {
+    background-color: #fff;
+    display: inline-block;
+}
+
+.container .block:first-child {
+    margin-left: 0;
+}
+
+.char-k {
+    width: 15px;
+    border-radius: 2px;
+    height: 53px;
+    margin-left: 39px;
+}
+
+.char-k:first-child {
+    margin-left: 49px;
+}
+
+.char-k:after {
+    content: "";
+    width: 25px;
+    height: 28px;
+    display: block;
+    border-radius: 2px;
+    transform: translate(0px, 0px) rotate(-191deg) scaleX(0.97) scaleY(0.84) skewX(127deg) skewY(10deg);
+    margin-top: 1px;
+    margin-left: 18px;
+    background-color: #fff;
+}
+
+.char-k:before {
+    content: "";
+    width: 16px;
+    height: 39px;
+    display: block;
+    transform: translate(0px, 0px) rotate(-188deg) scaleX(0.98) scaleY(0.84) skewX(33deg) skewY(9deg);
+    position: absolute;
+    margin-left: 23px;
+    margin-top: 19px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.char-b {
+    height: 66px;
+    margin-left: 38px;
+    /*border-top: 6px solid #1dadca;*/
+    background-color: inherit; /*For child block*/
+    border-right: 15px solid white;
+	border-top-color: inherit;
+	border-top-width: 6px;
+	border-top-style: solid;
+}
+
+.char-b:after {
+    content: "";
+    border: 13px solid #fff;
+    border-radius: 28px 30px 28px 30px;
+    background: transparent;
+    width: 27px;
+    height: 28px;
+    transform: rotate(59deg) scaleX(0.97) scaleX(0.98) skewX(0deg) skewY(1deg);
+    position: absolute;
+    margin: 12px 0 0 2px;
+}
+
+.char-b:before {
+    content: "";
+    width: 7px;
+    height: 24px;
+    background-color: inherit;
+    position: absolute;
+    margin: 42px 0 0 15px;
+    z-index: 1;
+}
+
+.char-o {
+    margin: 0 0 0 40px;
+    transform: scaleX(0.97) scaleY(1);
+    border: 14px solid #fff;
+    border-radius: 31px;
+    background-color: transparent;
+    width: 27px;
+    height: 26px;
+}
+
+.char-x {
+    width: 16px;
+    height: 53px;
+    border-radius: 2px;
+    background-color: #fff;
+    margin: 0 0 0 14px;
+    transform: skewX(-37deg);
+}
+
+.char-x:after {
+    content: "";
+    width: 16px;
+    height: 53px;
+    border-radius: 2px;
+    background-color: #fff;
+    margin: 0;
+    transform: skewX(57deg);
+    position: absolute;
+}
