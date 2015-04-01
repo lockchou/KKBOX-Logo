@@ -13,8 +13,6 @@ body {
 	text-align: left;
 	margin-top: 10px;
 	padding: 35px 53px 40px;
-	border-top-color: #1dadca;
-    border-right-color: #1dadca;
 	box-sizing: border-box;
 	opacity: 1;
 	transition-property: opacity background-color border-top-color;
@@ -23,17 +21,18 @@ body {
 	cursor: pointer;
 }
 
-.container:hover {
+/*.container:hover {
 	opacity: 1;
 	background-color: black;
 	border-top-color: black;
-}
+}*/
 .container:after {
 	content:"CSS";
 }
 
 .block {
     background-color: #fff;
+    border-color:#fff;
     display: inline-block;
 }
 
@@ -82,17 +81,20 @@ body {
     margin-left: 38px;
     /*border-top: 6px solid #1dadca;*/
     background-color: inherit; /*For child block*/
-    border-right: 15px solid #fff;
-	border-top-color: inherit;
+    border-right-color: inherit;
+    border-right-width: 15px;
+    border-right-style: solid;
+	border-top-color: #1dadca;
 	border-top-width: 6px;
 	border-top-style: solid;
 }
 
 .char-b:after { /*Circle*/
     content: "";
+    border-color: inherit;
     border-width: 13px;
     border-style: solid;
-    border-color: #fff;
+    border-top-color: #fff; /*For overwrite the parent style*/
     border-radius: 28px 30px 28px 30px;
     background: transparent;
     width: 27px;
@@ -104,12 +106,13 @@ body {
 
 .char-b:before {
     content: "";
-    width: 7px;
-    height: 24px;
-    background-color: inherit;
     position: absolute;
     margin: 42px 0 0 15px;
     z-index: 1;
+    border-left-color: #1dadca;
+    border-left-width: 7px;
+    border-left-style: solid;
+    height: 24px;
 }
 
 .char-o {
@@ -117,7 +120,7 @@ body {
     transform: scaleX(0.97) scaleY(1);
     border-width: 14px;
     border-style: solid;
-    border-color: #fff;
+    border-color: inherit;
     border-radius: 31px;
     background-color: transparent;
     width: 27px;
@@ -158,17 +161,18 @@ body {
     border-color: #1dadca;
     background-color: transparent;
 }
-.container.light-bg .char-x{
-    background-color:#1dadca;
-}
 .container.light-bg .char-b{
-    border-right-color:#1dadca;
     border-color: #1dadca;
+    border-top-color: #1dadca;
 }
 .container.light-bg .char-b:after{
     border-right-color:#1dadca;
-    border-color: inherit;
+    border-top-color: inherit;
 }
 .container.light-bg .char-b:before{
-    background-color:#fff;
+    border-left-color: #fff;
 }
+.container.light-bg .char-x{
+    background-color:#1dadca;
+}
+
