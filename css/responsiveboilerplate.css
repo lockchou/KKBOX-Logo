@@ -21,11 +21,11 @@ body {
 	transition-timing-function: linear;
 	cursor: pointer;
 }
-.container:hover {
+/*.container:hover {
 	opacity: 1;
 	background-color: black;
 	border-top-color: black;
-}
+}*/
 .container:after {
 	content:"CSS";
 }
