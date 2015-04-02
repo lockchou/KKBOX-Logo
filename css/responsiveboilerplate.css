@@ -15,7 +15,7 @@ body {
 	padding: 35px 53px 40px;
 	box-sizing: border-box;
 	opacity: 1;
-	transition-property: opacity background-color border-top-color;
+	transition-property: opacity background-color border-color;
 	transition-duration: 1s;
 	transition-timing-function: linear;
 	cursor: pointer;
