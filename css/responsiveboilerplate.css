@@ -1,5 +1,5 @@
 body {
-    background: url(../images/logo3.png) no-repeat center 10px;
+    /*background: url(../images/logo3.png) no-repeat center 10px;*/
     margin: 0;
     padding: 0;
 }
@@ -13,25 +13,26 @@ body {
 	text-align: left;
 	margin-top: 10px;
 	padding: 35px 53px 40px;
-	border-top-color: #1dadca;
 	box-sizing: border-box;
-	opacity: 0;
+	opacity: 1;
 	transition-property: opacity background-color border-top-color;
 	transition-duration: 1s;
 	transition-timing-function: linear;
 	cursor: pointer;
 }
-.container:hover {
+
+/*.container:hover {
 	opacity: 1;
 	background-color: black;
 	border-top-color: black;
-}
+}*/
 .container:after {
 	content:"CSS";
 }
 
 .block {
     background-color: #fff;
+    border-color:#fff;
     display: inline-block;
 }
 
@@ -59,7 +60,7 @@ body {
     transform: translate(0px, 0px) rotate(-191deg) scaleX(0.97) scaleY(0.84) skewX(127deg) skewY(10deg);
     margin-top: 1px;
     margin-left: 18px;
-    background-color: #fff;
+    background-color: inherit;
 }
 
 .char-k:before {
@@ -72,7 +73,7 @@ body {
     margin-left: 23px;
     margin-top: 19px;
     border-radius: 2px;
-    background-color: #fff;
+    background-color: inherit;
 }
 
 .char-b {
@@ -80,15 +81,20 @@ body {
     margin-left: 38px;
     /*border-top: 6px solid #1dadca;*/
     background-color: inherit; /*For child block*/
-    border-right: 15px solid white;
-	border-top-color: inherit;
+    border-right-color: inherit;
+    border-right-width: 15px;
+    border-right-style: solid;
+	border-top-color: #1dadca;
 	border-top-width: 6px;
 	border-top-style: solid;
 }
 
-.char-b:after {
+.char-b:after { /*Circle*/
     content: "";
-    border: 13px solid #fff;
+    border-color: inherit;
+    border-width: 13px;
+    border-style: solid;
+    border-top-color: #fff; /*For overwrite the parent style*/
     border-radius: 28px 30px 28px 30px;
     background: transparent;
     width: 27px;
@@ -100,18 +106,21 @@ body {
 
 .char-b:before {
     content: "";
-    width: 7px;
-    height: 24px;
-    background-color: inherit;
     position: absolute;
     margin: 42px 0 0 15px;
     z-index: 1;
+    border-left-color: #1dadca;
+    border-left-width: 7px;
+    border-left-style: solid;
+    height: 24px;
 }
 
 .char-o {
     margin: 0 0 0 40px;
     transform: scaleX(0.97) scaleY(1);
-    border: 14px solid #fff;
+    border-width: 14px;
+    border-style: solid;
+    border-color: inherit;
     border-radius: 31px;
     background-color: transparent;
     width: 27px;
@@ -132,8 +141,38 @@ body {
     width: 16px;
     height: 53px;
     border-radius: 2px;
-    background-color: #fff;
+    background-color: inherit;
     margin: 0;
     transform: skewX(57deg);
     position: absolute;
 }
+
+.container.light-bg{
+    opacity: 1;
+    background-color: #fff;
+    border-top-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.container.light-bg .block{
+    background-color: #1dadca;
+    border-top-color: #1dadca;
+}
+.container.light-bg .char-o{
+    border-color: #1dadca;
+    background-color: transparent;
+}
+.container.light-bg .char-b{
+    border-color: #1dadca;
+    border-top-color: #1dadca;
+}
+.container.light-bg .char-b:after{
+    border-right-color:#1dadca;
+    border-top-color: inherit;
+}
+.container.light-bg .char-b:before{
+    border-left-color: #fff;
+}
+.container.light-bg .char-x{
+    background-color:#1dadca;
+}
+
